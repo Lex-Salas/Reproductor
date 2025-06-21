@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LEX RADIO - En Vivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000428, #004e92);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .logo {
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .play-button {
+      background: #00ffff;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffff;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 10px #00ffff; }
+      50% { transform: scale(1.1); box-shadow: 0 0 30px #00ffff; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #00ffff; }
+    }
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/BhXCsFa.png" alt="Logo LEX RADIO" class="logo">
+  <h1>LEX RADIO</h1>
+  <p>Tus Recuerdos en el Presente</p>
+  <button class="play-button" onclick="document.getElementById('radio').play()">▶ Dale Play y Escucha en Vivo</button>
+  <audio id="radio" controls preload="auto">
+    <source src="https://stream.zeno.fm/lo1dx1b1e52tv" type="audio/mpeg">
+    Tu navegador no soporta el reproductor de audio.
+  </audio>
+</body>
+</html>
